@@ -1,3 +1,4 @@
+from .unknownConfigFormatError import UnknownConfigFormatError
 from .formats.ini.iniConfig import IniConfig
 from .formats.xml.xmlConfig import XmlConfig
 from .formats.yaml.yamlConfig import YamlConfig
@@ -11,6 +12,6 @@ class ConfigFactory:
     try:
       config = configOptions[dataFormat]
     except KeyError:
-      config = None
+      raise UnknownConfigFormatError
     return config
 
