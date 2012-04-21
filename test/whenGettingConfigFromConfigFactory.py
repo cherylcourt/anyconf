@@ -23,7 +23,7 @@ class WhenGettingConfigFromConfigFactory:
     obj = ConfigFactory().getConfig(FORMAT_YAML)
     assert isinstance(obj, YamlConfig)
 
-  def testThatAnUnknownFormatThrowsException(self):
+  def testThatAnUnknownFormatThrowsUnknownConfigFormatError(self):
     FORMAT_NOTHING = 0
     with pytest.raises(UnknownConfigFormatError):
       ConfigFactory().getConfig(FORMAT_NOTHING)
