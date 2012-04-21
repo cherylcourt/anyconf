@@ -1,6 +1,6 @@
-import sys
+from testHelpers import usingPython3OrLater
 
-if sys.version_info[0] >= 3:
+if usingPython3OrLater():
   from io import StringIO
 else:
   from StringIO import StringIO
