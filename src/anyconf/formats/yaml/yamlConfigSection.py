@@ -19,7 +19,7 @@ class YamlConfigSection(ConfigSection):
   def _yamlEntryToConfigEntry(self, entry):
     if self._hasChildren(entry):
       return YamlConfigSection(entry)
-    elif (type(entry) == list) and (type(entry[0]) == dict):
+    elif (type(entry) is list) and (type(entry[0]) is dict):
       convertedList = []
       for entryItem in entry:
         convertedList.append(self._yamlEntryToConfigEntry(entryItem))
@@ -28,7 +28,7 @@ class YamlConfigSection(ConfigSection):
       return self._getValue(entry)
 
   def _hasChildren(self, entry):
-    return type(entry) == dict
+    return type(entry) is dict
 
   def _getValue(self, entry):
     if entry is None:
