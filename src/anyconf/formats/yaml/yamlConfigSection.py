@@ -1,4 +1,4 @@
-from anyconf.configSection import ConfigSection
+from ...configSection import ConfigSection
 
 class YamlConfigSection(ConfigSection):
 

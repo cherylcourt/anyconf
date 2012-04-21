@@ -1,4 +1,4 @@
-from anyconf.formats.yaml.yamlConfigSection import YamlConfigSection
+from ...formats.yaml.yamlConfigSection import YamlConfigSection
 from ...formats import FORMAT_YAML
 from ...config import Config
 

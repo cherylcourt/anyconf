@@ -1,4 +1,4 @@
-from anyconf.configFactory import ConfigFactory
+from .configFactory import ConfigFactory
 
 class ConfigLoader:
   def load(self, inputData, dataFormat = None):
